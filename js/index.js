@@ -18,6 +18,9 @@
         div.appendChild(p);
         console.log(li);
 
+        // 未完了リストに追加
+        document.getElementById("incomplete-list").appendChild(li);
+
     }
 
     document.getElementById("add-button").addEventListener("click", () => onClickAdd());
