@@ -17,6 +17,16 @@
         const deleteButton = document.createElement("button");
         deleteButton.innerText = "削除";
 
+        // 完了ボタンのイベント
+        completeButton.addEventListener("click", () => {
+            alert("complete");
+        })
+
+        // 削除ボタンのイベント
+        deleteButton.addEventListener("click", () => {
+            alert("delete");
+        })
+
         // 子要素の生成
         li.appendChild(div);
         div.appendChild(p);
