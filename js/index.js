@@ -9,13 +9,19 @@
         // リストに追加するため必要な要素を生成
         const li = document.createElement("li");
         const div = document.createElement("div");
-        const p = document.createElement("p");
         div.className = "list-row";
+        const p = document.createElement("p");
         p.innerText = inputText;
+        const completeButton = document.createElement("button");
+        completeButton.innerText = "完了";
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "削除";
 
         // 子要素の生成
         li.appendChild(div);
         div.appendChild(p);
+        div.appendChild(completeButton);
+        div.appendChild(deleteButton);
         console.log(li);
 
         // 未完了リストに追加
