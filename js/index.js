@@ -34,6 +34,24 @@
             completeTarget.appendChild(p);
             completeTarget.appendChild(backButton);
             document.getElementById("complete-list").appendChild(li);
+
+            // 戻すボタンを押したときの処理
+            backButton.addEventListener("click", () => {
+                // 押されたボタンのテキストを取得
+                const backTarget = backButton.parentNode;
+                const backText = backTarget.firstElementChild.innerText;
+
+                // リストの初期化
+                backTarget.textContent = null;
+
+                // 未完了リストに戻す要素を生成
+                p.innerText = backText;
+                li.appendChild(div);
+                backTarget.appendChild(p);
+                backTarget.appendChild(completeButton);
+                backTarget.appendChild(deleteButton);
+                document.getElementById("incomplete-list").appendChild(li);
+            })
         })
 
         // 削除ボタンのイベント
