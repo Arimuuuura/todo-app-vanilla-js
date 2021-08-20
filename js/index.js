@@ -38,7 +38,7 @@
 
         // 削除ボタンのイベント
         deleteButton.addEventListener("click", () => {
-            alert("delete");
+            document.getElementById("incomplete-list").removeChild(li);
         })
 
         // 子要素の生成
