@@ -1,1 +1,1 @@
-# todo-app-vanilla-js
+# 簡単な todo　app を vanilla で作成
