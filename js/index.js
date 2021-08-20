@@ -19,7 +19,21 @@
 
         // 完了ボタンのイベント
         completeButton.addEventListener("click", () => {
-            alert("complete");
+            // 押されたボタンのテキストを取得
+            const completeTarget = completeButton.parentNode;
+            const completeText = completeTarget.firstElementChild.innerText;
+
+            // リストの初期化
+            completeTarget.textContent = null;
+
+            // 完了済みリストに追加する要素を生成
+            p.innerText = completeText;
+            const backButton = document.createElement("button");
+            backButton.innerText = "戻す";
+            li.appendChild(completeTarget);
+            completeTarget.appendChild(p);
+            completeTarget.appendChild(backButton);
+            document.getElementById("complete-list").appendChild(li);
         })
 
         // 削除ボタンのイベント
@@ -32,7 +46,6 @@
         div.appendChild(p);
         div.appendChild(completeButton);
         div.appendChild(deleteButton);
-        console.log(li);
 
         // 未完了リストに追加
         document.getElementById("incomplete-list").appendChild(li);
